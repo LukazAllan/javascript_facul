@@ -1,0 +1,17 @@
+.titulo {
+    display: block
+}
+
+.float-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+}
+.float {
+    float: left;
+    margin-right: 20px;
+}
+#sapoha {
+    display: block;
+
+}
