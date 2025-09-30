@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            Faça um programa que peça 10 números inteiros, calcule e mostre a
+            quantidade de números pares e a quantidade de números ímpares. Utilize
+            obrigatoriamente a função prompt() para coletar os números.
+            */
+            nums = [];
+            let p;
+            let imp = 0;
+            let par = 0;
+            for (let i = 0; i <= 10; i++) {
+                p = Number.parseInt(
+                    window.prompt(`Digite um numero inteiro, ${i + 1}/10`)
+                );
+                nums.push(p);
+                console.log(() => {
+                    if (p % 2 === 0) {
+                        par++;
+                        return `${p} é PAR`;
+                    } else {
+                        imp++;
+                        return `${p} é IMPAR`;
+                    }
+                });
+            }
+            console.log(`${par} são pares e ${imp} são ímpares`);
+            window.alert("Resultado no console");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const calculaPerimetro = (raio) => 2 * 3.14 * raio;
+            const calculaArea = (raio) => 3.14 * raio ** 2;
+
+            raio = window.prompt("Qual o raio do círculo?");
+
+            window.alert(
+                `Para o raio de ${raio}cm tem perímetro ${calculaPerimetro(
+                    raio
+                )}cm e tem area ${calculaArea(raio)}cm²`
+            );
+        </script>
+    </body>
+</html>

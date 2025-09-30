@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function calculaSalario(sal, indice, ano) {
+                let resultado = sal * indice + sal;
+                console.log(
+                    `Ano ${ano}: R$ ${sal.toFixed(2)} (aumento de ${(
+                        indice * 100
+                    ).toFixed(2)}%) -> R$ ${resultado.toFixed(2)}`
+                );
+                return resultado;
+            }
+
+            let salario = Number.parseFloat(
+                window.prompt("Qual o seu salário?")
+            );
+            let indice = 0.0015;
+
+            salario = calculaSalario(salario, indice, 1996);
+            for (let i = 1997; i < 2025; i++) {
+                if (indice < 5) {
+                    indice = indice * 2;
+                }
+                salario = calculaSalario(salario, indice, i);
+            }
+            window.alert(
+                "O Salário é R$" +
+                    salario.toFixed(2) +
+                    " com indice a " +
+                    indice.toFixed(2) +
+                    "%"
+            );
+        </script>
+    </body>
+</html>

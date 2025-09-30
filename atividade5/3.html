@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*Faça um programa que, dado um conjunto de N números,
+            determine o menor valor, o maior valor e a soma dos valores. */
+
+            function maior(arr) {
+                if (arr.length < 1) {
+                    throw Error(
+                        "esse array tem que ter alguma coisa, meu chapa!"
+                    );
+                }
+                let i = 0;
+                for (let c = 1; c < arr.length; c++) {
+                    if (arr[c] > arr[i]) {
+                        i = c;
+                    }
+                }
+                return i;
+            }
+
+            function menor(arr) {
+                if (arr.length < 1) {
+                    throw Error(
+                        "esse array tem que ter alguma coisa, meu chapa!"
+                    );
+                }
+                let i = 0;
+                for (let c = 1; c < arr.length; c++) {
+                    if (arr[c] < arr[i]) {
+                        i = c;
+                    }
+                }
+                return i;
+            }
+            let soma = (arr) => {
+                if (arr.length < 1) {
+                    throw Error(
+                        "esse array tem que ter alguma coisa, meu chapa!"
+                    );
+                }
+                result = 0;
+                for (let c = 0; c < arr.length; c++) {
+                    result = result + arr[c];
+                }
+                return result;
+            };
+
+            let nums = [];
+            for (let i = 0; i < 5; i++) {
+                nums.push(
+                    Number.parseInt(
+                        window.prompt("digita um inteiro aí, " + (i + 1) + "/5")
+                    )
+                );
+            }
+            console.log(nums);
+            console.log(
+                "O maior é " +
+                    nums[maior(nums)] +
+                    "\nO menor é " +
+                    nums[menor(nums)] +
+                    "\nE a soma desses elementos é " +
+                    soma(nums)
+            );
+        </script>
+    </body>
+</html>

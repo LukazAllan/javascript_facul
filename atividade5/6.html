@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function calculaRetorno(C, i, t) {
+                return C * (1 + i) ** t;
+            }
+
+            let capital_inicial = Number.parseFloat(
+                window.prompt("Qual o Capital Inicial do seu investimento?")
+            );
+            let index = Number.parseFloat(
+                window.prompt(
+                    "Qual a taxa de juros, em percentual, do seu investimento?"
+                )
+            );
+            let tempo = Number.parseFloat(
+                window.prompt("Qual o tempo, em meses, do seu investimento?")
+            );
+
+            window.alert(
+                `Esse teu investimento de R$${capital_inicial.toFixed(
+                    2
+                )}, com taxa de juros ${index}%a.m. em ${tempo} meses lhe renderá a bagatela de R$${calculaRetorno(
+                    capital_inicial,
+                    index,
+                    tempo
+                ).toFixed(2)}`
+            );
+        </script>
+    </body>
+</html>
