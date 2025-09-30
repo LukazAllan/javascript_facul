@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //Trabalho Efetivo Discente
+            function calcularTotal(preco, quantidade) {
+                return preco * quantidade;
+            }
+            function aplicarDesconto(val) {
+                if (typeof val != "number") {
+                    throw new Error("Tipo errado, meu chapa!");
+                }
+                if (val <= 100) {
+                    window.alert("sem desconto");
+                    return val;
+                } else {
+                    window.alert("com desconto, :)");
+                    return val - val * 0.1;
+                }
+            }
+            function exibirResumo() {
+                window.alert(
+                    "Valor total: R$" +
+                        a_pagar +
+                        "\nValor final: R$" +
+                        valor_final
+                );
+            }
+            a_pagar = Number.parseFloat(window.prompt("Quanto a pagar meu jovem"));
+            console.log("a pagar R$" + a_pagar);
+            valor_final = aplicarDesconto(a_pagar);
+            exibirResumo();
+        </script>
+    </body>
 </html>
